@@ -9,6 +9,7 @@ import {
 	Popover,
 	FocusReturnProvider,
 	Button,
+	__experimentalStyledProvider as StyledProvider,
 } from '@wordpress/components';
 import { EntityProvider } from '@wordpress/core-data';
 import {
@@ -145,7 +146,7 @@ function Editor() {
 		[ page.context ]
 	);
 	return (
-		<>
+		<StyledProvider>
 			<EditorStyles styles={ settings.styles } />
 			<FullscreenMode isActive={ isFullscreenActive } />
 			<SlotFillProvider>
@@ -273,7 +274,7 @@ function Editor() {
 					</EntityProvider>
 				</DropZoneProvider>
 			</SlotFillProvider>
-		</>
+		</StyledProvider>
 	);
 }
 export default Editor;
