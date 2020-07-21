@@ -61,7 +61,9 @@ export function initialize( id, settings ) {
 
 	registerCoreBlocks();
 	if ( process.env.GUTENBERG_PHASE === 2 ) {
-		__experimentalRegisterExperimentalCoreBlocks( settings );
+		__experimentalRegisterExperimentalCoreBlocks( settings, {
+			postType: 'wp_template',
+		} );
 	}
 
 	render( <Editor />, document.getElementById( id ) );
