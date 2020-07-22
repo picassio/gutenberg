@@ -114,9 +114,8 @@ const LinkControlSearchInput = ( {
 				value={ value }
 				onChange={ onInputChange }
 				placeholder={ placeholder ?? __( 'Search or type url' ) }
-				__experimentalRenderSuggestions={
-					showSuggestions ? handleRenderSuggestions : null
-				}
+				disableSuggestions={ ! showSuggestions }
+				__experimentalRenderSuggestions={ handleRenderSuggestions }
 				__experimentalFetchLinkSuggestions={ searchHandler }
 				__experimentalHandleURLSuggestions={ true }
 				__experimentalShowInitialSuggestions={ showInitialSuggestions }
