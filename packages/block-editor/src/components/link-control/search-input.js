@@ -36,6 +36,7 @@ const LinkControlSearchInput = ( {
 			className="is-vertically-retracted"
 		/>
 	),
+	renderControl = null,
 	fetchSuggestions = null,
 	allowDirectEntry = true,
 	showInitialSuggestions = false,
@@ -119,6 +120,7 @@ const LinkControlSearchInput = ( {
 				__experimentalFetchLinkSuggestions={ searchHandler }
 				__experimentalHandleURLSuggestions={ true }
 				__experimentalShowInitialSuggestions={ showInitialSuggestions }
+				__experimentalRenderControl={ renderControl }
 			/>
 			{ children }
 		</form>
